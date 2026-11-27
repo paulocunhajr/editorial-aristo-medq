@@ -18,9 +18,10 @@ W, H = 1080, 1350
 
 TEMAS = {
     'Aristo': dict(dark='#040A1C', dark2='#0B1E4A', brand='#1677FF', brand2='#4C9BFF', light='#EEF4FC',
-                   ink='#0A1022', soft='#DCE8FA', hi='#1677FF', logo='logo-aristo.png', plataforma='Aristo'),
-    'MedQ': dict(dark='#24145E', dark2='#3B23A0', brand='#5B34D6', brand2='#00D3DA', light='#F3F0FC',
-                 ink='#1B1240', soft='#E4DCFA', hi='#00D3DA', logo='logo-medq.png', plataforma='MedQ'),
+                   ink='#0A1022', soft='#DCE8FA', hi='#1677FF', acc='#1677FF', acc_ink='#FFFFFF', logo='logo-aristo.png', plataforma='Aristo'),
+    # paleta oficial MedQ (manual de marca): #00DFE3, #452B9A, #B07DF4, #414042
+    'MedQ': dict(dark='#452B9A', dark2='#452B9A', brand='#452B9A', brand2='#00DFE3', light='#F3F0FC',
+                 ink='#414042', soft='#E4DCFA', hi='#00DFE3', acc='#00DFE3', acc_ink='#452B9A', logo='logo-medq.png', plataforma='MedQ'),
 }
 
 
@@ -62,7 +63,7 @@ h2 em{{font-style:normal;color:{t['brand']}}}
 .light .slot{{color:#8A5300;border-color:#E39A00;background:#FFF2DB}}
 .bubble{{position:relative;display:inline-block;align-self:flex-start;background:{t['brand']};color:#fff;font-weight:800;font-size:44px;border-radius:18px;padding:22px 52px}}
 .bubble:after{{content:'';position:absolute;left:96px;bottom:-24px;border:14px solid transparent;border-top:12px solid {t['brand']};border-left-width:18px;border-right-width:18px;border-top-width:26px}}
-.brandbg .bubble{{background:#fff;color:{t['brand']}}}.brandbg .bubble:after{{border-top-color:#fff}}
+.dark .bubble{{background:{t['acc']};color:{t['acc_ink']}}}.dark .bubble:after{{border-top-color:{t['acc']}}}.dark .bubble.ghost{{background:transparent;color:#fff;border:3px solid {t['acc']}}}.brandbg .bubble{{background:#fff;color:{t['brand']}}}.brandbg .bubble:after{{border-top-color:#fff}}
 .meta{{font-size:30px;font-weight:600;margin-top:46px}}
 .logo{{height:64px;margin-top:auto;align-self:flex-start}}
 .light .logo{{filter:brightness(0) saturate(100%)}}
@@ -134,7 +135,7 @@ def cards(p, split=False):
 <div class='fonte'>Dados extraídos de {f"{p['n']:,}".replace(',', '.')} resoluções desta questão na plataforma {t['plataforma']}.</div>
 <div class='bubble' style='margin-top:52px'>Veja a questão ›</div>
 <div class='meta'>{html.escape(p['area'])} • {html.escape(p['tema'])}{f' • prova em {data_prova}' if data_prova else ''}</div>
-{logo(t)}""", BLOB_TR.format(c=t['brand'])))
+{logo(t)}""", BLOB_TR.format(c=t['acc'])))
 
     alts = ''.join(f"<div class='alt'><b>{k}</b><span>{fmt(v)}</span></div>" for k, v in p['alternativas'].items())
     cmd = f"<div class='cmd'>{fmt(p['comando'])}</div>" if p['comando'] else ''
@@ -171,7 +172,7 @@ def cards(p, split=False):
 <div class='fecho' style='margin-top:120px'>{fmt(p['fecho'])}</div>
 <div class='fecho2'>Qual seria a sua conduta? Discuta nos comentários.</div>
 <div class='cta'><div class='bubble'>Salve para revisar ›</div><div class='bubble' style='background:transparent;border:3px solid {t['brand2']};color:#fff'>Envie para quem vai fazer a {p['banca']} ›</div></div>
-{logo(t)}""".replace("<div class='bubble' style='background:transparent", "<div class='bubble ghost' style='background:transparent"), BLOB_BR.format(c=t['brand'])))
+{logo(t)}""".replace("<div class='bubble' style='background:transparent", "<div class='bubble ghost' style='background:transparent"), BLOB_BR.format(c=t['acc'])))
 
     N = len(out)
     return [(cls, body.replace('{n}', f'{i + 1}/{N}'), deco) for i, (cls, body, deco) in enumerate(out)], t
