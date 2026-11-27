@@ -76,7 +76,7 @@ h2 em{{font-style:normal;color:{t['brand']}}}
 .alts{{display:flex;flex-direction:column;gap:16px}}
 .alt{{display:flex;gap:26px;align-items:center;background:#fff;border:3px solid {t['brand']};border-radius:22px;padding:18px 26px;font-size:33px;line-height:1.28}}
 .alt b{{flex:none;width:62px;height:62px;border-radius:50%;background:{t['brand']};color:#fff;display:grid;place-items:center;font-size:34px;font-weight:850}}
-.small .vies p{{font-size:27px}}.small .vies h4{{font-size:30px}}.small .vies{{margin-top:34px;gap:20px}}.small .bars{{gap:12px}}.xs .alt{{font-size:26px;padding:10px 20px;gap:18px}}.xs .alts{{gap:12px}}.xs h2{{display:none}}.xs .bubble{{margin-top:22px!important;font-size:36px;padding:14px 38px}}.xs .enun{{font-size:31px;margin-top:14px!important}}.xs .cmd{{font-size:31px;margin-top:14px}}.xs .alt b{{width:48px;height:48px;font-size:27px}}.xs .lab{{margin:20px 0 12px}}.small .enun{{font-size:33px}}.small .alt{{font-size:29px;padding:14px 22px}}.small .alt b{{width:54px;height:54px;font-size:30px}}.small .cmd{{font-size:33px}}
+.small .vies p{{font-size:27px}}.small .vies h4{{font-size:30px}}.small .vies{{margin-top:34px;gap:20px}}.small .stats{{display:flex;flex-direction:column;gap:18px;margin:36px 0 22px}}.stat{{display:flex;align-items:center;gap:30px;background:#fff;border:3px solid #C9D2E3;border-radius:22px;padding:18px 30px}}.stat b{{flex:none;min-width:250px;font-size:82px;line-height:1;font-weight:850;letter-spacing:-.03em;color:{t['ink']}}}.stat span{{font-size:30px;line-height:1.3}}.stat.ok{{border-color:{t['brand']}}}.stat.ok b{{color:{t['brand']}}}.small .stat b{{font-size:68px;min-width:210px}}.bars{{gap:12px}}.xs .alt{{font-size:26px;padding:10px 20px;gap:18px}}.xs .alts{{gap:12px}}.xs h2.qh{{display:none}}.xs .bubble{{margin-top:22px!important;font-size:36px;padding:14px 38px}}.xs .enun{{font-size:31px;margin-top:14px!important}}.xs .cmd{{font-size:31px;margin-top:14px}}.xs .alt b{{width:48px;height:48px;font-size:27px}}.xs .lab{{margin:20px 0 12px}}.small .enun{{font-size:33px}}.small .alt{{font-size:29px;padding:14px 22px}}.small .alt b{{width:54px;height:54px;font-size:30px}}.small .cmd{{font-size:33px}}
 .img{{flex:none;align-self:flex-start;width:600px;margin-top:26px;border-radius:22px;overflow:hidden;border:3px solid {t['soft']}}}.img img{{display:block;width:100%}}
 .bars{{display:flex;flex-direction:column;gap:18px;margin-top:34px}}
 .bar{{display:grid;grid-template-columns:62px 1fr 150px;gap:22px;align-items:center;font-size:30px}}
@@ -132,7 +132,7 @@ def cards(p, split=False):
 <div class='top' style='margin-top:120px'><span>Prova real • {prova}</span></div>
 <h1 style='font-size:{84 if len(c["headline"]) < 70 else 72 if len(c["headline"]) < 90 else 64}px'>{fmt(c['headline'])}</h1>
 <div class='dado'>{fmt(c['dado'])}</div>
-{f"<div class='fonte'>Dados extraídos de {p['n']:,} resoluções desta questão na plataforma {t['plataforma']}.</div>".replace(',', '.', 1) if p.get('n') else "<div class='fonte'><span class='slot' style='font-size:26px'>Nº de resoluções pendente</span></div>"}
+<div class='fonte'>{html.escape(p['fonte'])}{' na plataforma Aristo.' if p['marca'] == 'Aristo' else '.'}</div>
 <div class='bubble' style='margin-top:52px'>Veja a questão ›</div>
 <div class='meta'>{html.escape(p['area'])} • {html.escape(p['tema'])}{f' • prova em {data_prova}' if data_prova else ''}</div>
 {logo(t)}""", BLOB_TR.format(c=t['acc'])))
@@ -140,19 +140,22 @@ def cards(p, split=False):
     alts = ''.join(f"<div class='alt'><b>{k}</b><span>{fmt(v)}</span></div>" for k, v in p['alternativas'].items())
     cmd = f"<div class='cmd'>{fmt(p['comando'])}</div>" if p['comando'] else ''
     head = lambda tit: f"<div class='top'><span>{prova} • {tit}</span><i>{{n}}</i></div>"
-    if p.get('imagem') or split:
+    partes = p['enunciado'] if isinstance(p['enunciado'], list) else [p['enunciado']]
+    if p.get('imagem') or split or len(partes) > 1:
         img = f"<div class='img'><img src='{b64(GER / p['imagem'])}'></div>" if p.get('imagem') else ''
-        out.append(('light', head('Questão oficial') + f"<h2 style='font-size:46px'>Enunciado oficial da prova</h2><div class='enun' style='margin-top:22px;{'font-size:31px' if img else ''}'>{fmt(p['enunciado'])}</div>{img}{'' if img else "<div class='bubble' style='margin-top:44px'>Veja as alternativas ›</div>"}{logo(t)}", BLOB_TL.format(c=t['brand'])))
+        for k, parte in enumerate(partes, 1):
+            tit = 'Enunciado oficial da prova' + (f' ({k}/{len(partes)})' if len(partes) > 1 else '')
+            seta = "<div class='bubble' style='margin-top:40px'>" + ('Continua ›' if k < len(partes) else 'Veja as alternativas ›') + "</div>"
+            out.append(('light auto', head('Questão oficial') + f"<h2 class='qh' style='font-size:46px'>{tit}</h2><div class='enun' style='margin-top:22px;{'font-size:31px' if img else ''}'>{fmt(parte)}</div>{img if k == len(partes) else ''}{'' if img else seta}{logo(t)}", BLOB_TL.format(c=t['brand'])))
         out.append(('light auto', head('Alternativas') + f"{cmd}<div class='lab'>ALTERNATIVAS</div><div class='alts'>{alts}</div><div class='bubble' style='margin-top:44px'>Qual você marcaria? ›</div>{logo(t)}", BLOB_TL.format(c=t['brand'])))
     else:
-        out.append(('light auto', head('Questão oficial') + f"<h2 style='font-size:46px'>Enunciado oficial da prova</h2><div class='enun' style='margin-top:22px'>{fmt(p['enunciado'])}</div>{cmd}<div class='lab'>ALTERNATIVAS</div><div class='alts'>{alts}</div><div class='bubble' style='margin-top:40px'>Qual você marcaria? ›</div>{logo(t)}", BLOB_TL.format(c=t['brand'])))
+        out.append(('light auto', head('Questão oficial') + f"<h2 class='qh' style='font-size:46px'>Enunciado oficial da prova</h2><div class='enun' style='margin-top:22px'>{fmt(partes[0])}</div>{cmd}<div class='lab'>ALTERNATIVAS</div><div class='alts'>{alts}</div><div class='bubble' style='margin-top:40px'>Qual você marcaria? ›</div>{logo(t)}", BLOB_TL.format(c=t['brand'])))
 
-    # 3 ponto cego
-    bars = ''.join(
-        f"<div class='bar{' ok' if k == p['gabarito'] else ''}'><b>{k}</b><div><div class='lbl' style='font-size:24px;margin-bottom:6px'>{'Gabarito' if k == p['gabarito'] else '&nbsp;'}</div>{f"<div class='tr' style='background:{t['brand'] if k == p['gabarito'] else '#9AA3B5'};border:0;width:{p['dist'][k]}%'></div>" if p.get('dist') else "<div class='tr'></div>"}</div><span class='v'>{f"<b style='border:0;width:auto;height:auto;font-size:34px'>{p['dist'][k]}%</b>" if p.get('dist') else "<span class='slot'>__%</span>"}</span></div>"
-        for k in p['alternativas'])
+    # 3 raio-x (só números do relatório)
+    rx = p['raio']
+    stats = ''.join(f"<div class='stat{' ok' if ok else ''}'><b>{html.escape(v)}</b><span>{html.escape(l)}</span></div>" for v, l, ok in rx['linhas'])
     vies = ''.join(f"<div><h4>{fmt(a)}</h4><p>{fmt(b)}</p></div>" for a, b in p['vies'])
-    out.append(('light auto', head('O ponto cego') + f"<h2>Onde a <em>maioria</em> errou</h2><div class='sub'>Distribuição real das respostas:</div><div class='bars'>{bars}</div><div class='vies'>{vies}</div>{logo(t)}", BLOB_R.format(c=t['brand'])))
+    out.append(('light auto', head('O ponto cego') + f"<h2>{html.escape(rx['titulo'])}</h2><div class='stats' style='margin-top:40px'>{stats}</div><div class='sub' style='font-size:31px;margin-top:20px'>{fmt(rx['nota'])}</div><div class='vies'>{vies}</div><div class='bubble' style='margin-top:48px'>Por que erraram? ›</div>{logo(t)}", BLOB_R.format(c=t['brand'])))
 
     # 4 pulo do gato
     pu = p['pulo']
@@ -205,7 +208,7 @@ def main():
                         pg.evaluate('document.fonts.ready')
                 over = pg.evaluate("document.querySelector('.logo').getBoundingClientRect().bottom")
                 if over > H - 60:
-                    if not split and 'Questão oficial' in body:
+                    if not split and ('Questão oficial' in body or 'Alternativas' in body):
                         refaz = True
                         break
                     print(f"ATENÇÃO: {p['id']} card {i} transborda ({over:.0f}px)")
@@ -221,22 +224,21 @@ def main():
                 for f in sorted(folder.iterdir()):
                     zf.write(f, f.name)
             by_day.setdefault(p['data'], []).append(folder)
-            pend = ['% de erro da capa', 'distribuição das respostas por alternativa (card 3)']
-            if p.get('professor'):
-                pend.append('nome, foto e validação da fala do professor')
+            rel = 'radar-editorial-USP-SP-SP-2024.pdf (211 alunos)' if p['banca'] == 'USP-SP' else 'ipsemg22.pdf / painel IPSEMG 2024 (254 alunos)'
+            nums = '; '.join(f"{v} {l}" for v, l, _ in p['raio']['linhas'])
             data.append(dict(
                 id=p['id'], marca=p['marca'], data_prevista=p['data'], titulo=p['titulo'], tema=p['tema'],
                 dificuldade='Não classificada', grande_area=p['area'], instituicao=p['banca'], ano=p['ano'],
-                tipo='Questão original', formato='Prova real · dado + professor' if p.get('professor') else 'Prova real · dado',
+                tipo='Questão original', formato=f"Prova real · {p['linha']}",
                 familia_gancho='dado de erro + provocação', gabarito=p['gabarito'],
                 conceito_decisivo=re.sub(r'\*\*', '', p['pulo']['gabarito']),
                 erro_principal=' '.join(re.sub(r'\*\*', '', a) + ': ' + b for a, b in p['vies']),
-                discriminacao='', fonte_questao=f"{p['banca']} {p['ano']}", referencias=[],
-                justificativa_selecao=f"Prova {p['banca']} em {PROVAS.get(p['banca'], '?')}/2026.",
-                texto_opcional_carrossel='', notas_auditoria='PENDENTE: ' + '; '.join(pend) + '.',
+                discriminacao=p['linha'], fonte_questao=f"{p['banca']} {p['ano']}, {p['q']}. Texto e gabarito conferidos com o relatório/banco de questões.", referencias=[f'Dados: {rel}'],
+                justificativa_selecao=f"Prova {p['banca']} em {PROVAS.get(p['banca'], '?')}/2026. Item da linha editorial {p['linha']} no relatório. Números usados: {nums}.",
+                texto_opcional_carrossel='', notas_auditoria='Números copiados do relatório, sem estimativa. Pendente: revisão docente e conferência visual.' + (' Confirmar se a chancela de dados pode ser usada na marca MedQ (os dados são do painel Aristo).' if p['marca'] == 'MedQ' else ''),
                 candidato_reel='não por ora', legenda=p['legenda'], imagens_pendentes=[],
-                status_cientifico='PENDENTE: revisão docente', status_visual='PENDENTE: dados do relatório',
-                status_geral='PENDENTE', versao='v2 · formato prova real', autorizacao='', n_cards=len(imgs),
+                status_cientifico='PENDENTE: revisão docente', status_visual='PENDENTE: conferência visual',
+                status_geral='PENDENTE', versao='v3 · dados reais · 2026-11-27', autorizacao='Semana 30/11–06/12 autorizada pelo usuário em 27/11/2026', n_cards=len(imgs),
                 imagens=[], pasta=f"{p['marca']}/{p['data']}/post-01", status_derivado='PENDENTE',
                 banca=f"{p['banca']} {p['ano']}", imgs=imgs, zip=z.relative_to(ROOT).as_posix()))
         br.close()
@@ -255,7 +257,7 @@ def main():
     _, end = json.JSONDecoder().raw_decode(s[i:])
     s = s[:i] + json.dumps(data, ensure_ascii=False) + s[i + end:]
     s = re.sub(r'DAYZ=\{.*?\}', lambda m: 'DAYZ=' + json.dumps(dayz), s, count=1, flags=re.S)
-    s = s.replace('${DATA.length} de 154 produzidos', '${DATA.length} carrosséis da semana')
+    s = s.replace('${DATA.length} de 154 produzidos', '${DATA.length} carrosséis da semana').replace('${DATA.length} carrosséis do piloto (Gate 1)', '${DATA.length} carrosséis da semana')
     idx.write_text(s, encoding='utf-8')
     print(len(data), 'posts;', sum(len(d['imgs']) for d in data), 'cards')
 
