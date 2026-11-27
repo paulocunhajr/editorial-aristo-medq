@@ -104,7 +104,7 @@ host.querySelector('.p').onclick=()=>{go(k-1)};host.querySelector('.n').onclick=
 const wire=()=>document.querySelectorAll('[data-id]').forEach(b=>b.onclick=()=>detail(DATA.find(x=>x.id==b.dataset.id)));
 const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
 const monday=s=>{const d=new Date(s+'T12:00');d.setDate(d.getDate()-(d.getDay()+6)%7);return iso(d)};
-const WEEKS=[...new Set(DATA.map(r=>monday(r.data_prevista)))].sort();let WEEK=WEEKS.find(w=>w>=monday(iso(new Date())))||WEEKS[WEEKS.length-1],CALM=WEEK.slice(0,7);
+const WEEKS=[...new Set(DATA.map(r=>monday(r.data_prevista)))].sort();let WEEK=WEEKS.find(w=>w>=iso(new Date()))||WEEKS[WEEKS.length-1],CALM=WEEK.slice(0,7);
 const dm=s=>new Date(s+'T12:00').toLocaleDateString('pt-BR',{day:'numeric',month:'short'}).replace('.','');
 const MONTHS=[...new Set(DATA.map(r=>r.data_prevista.slice(0,7)))].sort();
 function week(R){const d0=new Date(WEEK+'T12:00'),dd=[...Array(7)].map((_,i)=>{const x=new Date(d0);x.setDate(d0.getDate()+i);return iso(x)});const wi=WEEKS.indexOf(WEEK);
