@@ -41,3 +41,10 @@ Os percentuais agregados de 43% (TB contato), 46% (teste influenza), 48,2% (indu
 A revisão clínica é de redação e delimitação ao enunciado, não confirmação de condutas. Foram contextualizados os conceitos de hipocalcemia neonatal, VPN, asma, indução com cesárea prévia, topografia pupilar, Robson, disseminação do câncer gástrico, trauma e vacinação. A equipe docente deve verificar as fontes e os casos completos antes de aprovar.
 
 As chamadas comerciais e os convites a revisar variam conforme o assunto. Mantidas as hashtags e a identificação dos casos fictícios. Não houve revisão visual dos 117 cards ou regeneração de ZIP/PPTX/XLSX; o PR permanece rascunho. Não publicar antes da sincronização e aprovação.
+
+## Solicitação de simplificação visual
+
+- Removida a frase “Dados da plataforma Aristo.” das 14 legendas da semana de 30/11 a 06/12, tanto no HTML quanto nos TXT correspondentes. Fontes dos dados, referências e identificação da banca mantidas nas fichas.
+- Removido o contador de navegação x/n sobre o visualizador do site, mantendo as setas e miniaturas.
+- A área e o tema permanecem como metadados de classificação no site (filtros, gráficos e fichas). Não os apagar das fontes estruturadas.
+- Inspeção de 11 artes originais: a numeração e os rótulos solicitados também estão incorporados aos pixels das imagens, não apenas ao HTML. Exemplos: p/Aristo/2026-11-30/post-01/01.jpg (chancela e rodapé de área/tema), p/Aristo/2026-11-30/post-01/02.jpg (2/6), MedQ/2026-11-16/post-01/01.png (1/6 e rótulo de área). Remover esses elementos nos arquivos fonte ou no processo de renderização; não apagar textos dos enunciados, alternativas, referências internas, números das questões, percentuais de acerto, datas de prova nem logos. Regenerar as imagens e os ZIPs correspondentes, além dos PPTX editáveis do piloto. A edição binária não foi executada nesta rodada porque o repositório não está acessível ao ambiente de processamento de arquivos; o acesso pelo conector permite inspeção, mas não fornece um checkout local. Não considerar esta etapa visual concluída.
