@@ -132,7 +132,7 @@ def cards(p, split=False):
 <div class='top' style='margin-top:120px'><span>Prova real • {prova}</span></div>
 <h1 style='font-size:{84 if len(c["headline"]) < 70 else 72 if len(c["headline"]) < 90 else 64}px'>{fmt(c['headline'])}</h1>
 <div class='dado'>{fmt(c['dado'])}</div>
-<div class='fonte'>{html.escape(p['fonte'])}{' na plataforma Aristo.' if p['marca'] == 'Aristo' else '.'}</div>
+<div class='fonte'>Dados da plataforma Aristo · {prova}</div>
 <div class='bubble' style='margin-top:52px'>Veja a questão ›</div>
 <div class='meta'>{html.escape(p['area'])} • {html.escape(p['tema'])}{f' • prova em {data_prova}' if data_prova else ''}</div>
 {logo(t)}""", BLOB_TR.format(c=t['acc'])))
@@ -173,7 +173,7 @@ def cards(p, split=False):
     # 6 fechamento
     out.append(('dark', head('Antes da prova') + f"""
 <div class='fecho' style='margin-top:120px'>{fmt(p['fecho'])}</div>
-<div class='fecho2'>Qual seria a sua conduta? Discuta nos comentários.</div>
+<div class='fecho2'>{fmt(p.get('pergunta', 'Qual seria a sua conduta? Discuta nos comentários.'))}</div>
 <div class='cta'><div class='bubble'>Salve para revisar ›</div><div class='bubble' style='background:transparent;border:3px solid {t['brand2']};color:#fff'>Envie para quem vai fazer {'o' if p['banca'] in ('IPSEMG',) else 'a'} {p['banca']} ›</div></div>
 {logo(t)}""".replace("<div class='bubble' style='background:transparent", "<div class='bubble ghost' style='background:transparent"), BLOB_BR.format(c=t['acc'])))
 
@@ -235,7 +235,7 @@ def main():
                 erro_principal=' '.join(re.sub(r'\*\*', '', a) + ': ' + b for a, b in p['vies']),
                 discriminacao=p['linha'], fonte_questao=f"{p['banca']} {p['ano']}, {p['q']}. Texto e gabarito conferidos com o relatório/banco de questões.", referencias=[f'Dados: {rel}'],
                 justificativa_selecao=f"Prova {p['banca']} em {PROVAS.get(p['banca'], '?')}/2026. Item da linha editorial {p['linha']} no relatório. Números usados: {nums}.",
-                texto_opcional_carrossel='', notas_auditoria='Números copiados do relatório, sem estimativa. Pendente: revisão docente e conferência visual.' + (' Confirmar se a chancela de dados pode ser usada na marca MedQ (os dados são do painel Aristo).' if p['marca'] == 'MedQ' else ''),
+                texto_opcional_carrossel='', notas_auditoria='Números copiados do relatório, sem estimativa; nº de alunos omitido na arte por decisão de 27/11. Chancela Aristo também na MedQ (autorizado em 27/11). Pendente: revisão docente e conferência visual.',
                 candidato_reel='não por ora', legenda=p['legenda'], imagens_pendentes=[],
                 status_cientifico='PENDENTE: revisão docente', status_visual='PENDENTE: conferência visual',
                 status_geral='PENDENTE', versao='v3 · dados reais · 2026-11-27', autorizacao='Semana 30/11–06/12 autorizada pelo usuário em 27/11/2026', n_cards=len(imgs),
