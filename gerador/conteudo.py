@@ -198,7 +198,7 @@ dict(
     comando='Assinale qual é a alternativa mais adequada.',
     alternativas={
         'A': 'Preservativo.',
-        'B': 'Dispositivo intrauterino de cobre.',
+        'B': 'Dispositivo intrauterino cobre.',
         'C': 'Pílula progestagênica contínua.',
         'D': 'Pílula estrogênica-progestagênica cíclica.',
     },
@@ -262,7 +262,7 @@ dict(
         headline='As lesões já sumiram. **A USP quer saber o que você vigia nos próximos meses.**',
         dado='[[__]] dos alunos erraram o seguimento.',
     ),
-    enunciado='Paciente de 4 anos previamente hígido está passando em consulta de rotina pediátrica. Mãe refere que, há cerca de 2 semanas, ele apresentou um quadro de **dor nos punhos e tornozelos, dor abdominal e "caroços elevados" pelo corpo**. Ela o medicou com **amoxicilina** por conta própria e refere que, após cerca de uma semana, as lesões começaram a melhorar. Ao exame, está em BEG, corado, hidratado, FC: 92 bpm, FR: 20 ipm, PA: 82x50 mmHg. Restante do exame clínico sem alterações, exceto por **lesões residuais em membros inferiores**, conforme imagem.',
+    enunciado='Paciente de 4 anos previamente hígido está passando em consulta de rotina pediátrica. Mãe refere que, há cerca de 2 semanas, ele apresentou um quadro de **dor nos punhos e tornozelos, dor abdominal e "caroços elevados" pelo corpo**. Ela o medicou com **amoxicilina** por conta própria e refere que, após cerca de uma semana, as lesões começaram a melhorar. Ao exame, está em BEG, corado, hidratado, FC: 92 bpm, FR: 20 ipm, PA: 82x50 mmHg. Restante do exame clínico sem alterações, exceto por **lesões residuais em membros inferiores**, conforme imagem a seguir.',
     imagem='assets/usp2024-q11.jpg',
     comando='Considerando a principal hipótese diagnóstica, assinale os exames que deverão ser realizados de forma **seriada nos meses subsequentes**.',
     alternativas={
@@ -296,7 +296,7 @@ dict(
         headline='Frequência cardíaca de 68. **Quem marcou ivabradina errou por 2 batimentos.**',
         dado='[[__]] dos alunos erraram a prescrição. Você completaria o tratamento?',
     ),
-    enunciado='Mulher de 65 anos, **diabética** em uso de metformina 1.000 mg de 12/12 horas/dia, procura UBS por dispneia aos médios esforços, há 2 meses. Relata IAM há 4 anos e traz ECO com **fração de ejeção de 33%** e hipocinesia de parede lateral. Está em uso de AAS 100 mg/dia, atorvastatina 40 mg/dia, **carvedilol 25 mg duas vezes/dia, enalapril 20 mg duas vezes/dia, espironolactona 25 mg uma vez/dia** e furosemida 40 mg/dia. Ao exame físico, PA: 120x76 mmHg e **FC: 68 bpm**, ausculta pulmonar normal e sem edema de membros inferiores.',
+    enunciado='Mulher de 65 anos, **diabética** em uso de metformina 1.000 mg de 12/12 horas/dia, procura UBS por dispneia aos médios esforços, há 2 meses. Relata infarto agudo do miocárdio (IAM) há 4 anos e traz ECO com **fração de ejeção de 33%** e hipocinesia de parede lateral. Está em uso de AAS 100 mg/dia, atorvastatina 40 mg/dia, **carvedilol 25 mg duas vezes/dia, enalapril 20 mg duas vezes/dia, espironolactona 25 mg uma vez/dia** e furosemida 40 mg/dia. Ao exame físico, apresenta PA: 120x76 mmHg e **FC: 68 bpm**, ausculta pulmonar normal e sem edema de membros inferiores.',
     comando='Assinale o tratamento medicamentoso indicado para essa paciente.',
     alternativas={
         'A': 'Introduzir ivabradina ou aumentar dose de espironolactona.',
