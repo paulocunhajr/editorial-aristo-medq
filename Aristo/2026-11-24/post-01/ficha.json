@@ -20,10 +20,10 @@
     "Sociedade Brasileira de Pediatria. Consenso sobre anemia ferropriva: atualização. Destaques 2021. Departamentos Científicos de Nutrologia e Hematologia-Hemoterapia."
   ],
   "justificativa_selecao": "Formato caso fictício (Q28). Tema muito frequente em Pediatria; ensina um roteiro diagnóstico (marca Aristo), não só a resposta.",
-  "texto_opcional_carrossel": "Caso construído pela equipe para treinar a leitura conjunta de ferritina, RDW e história.",
+  "texto_opcional_carrossel": "O caso permite interpretar a ferritina e o RDW junto da história alimentar.",
   "notas_auditoria": "O gancho do v0 entregava a resposta (\"Ferritina baixa\"); corrigido. O v0 rotulava o card como \"Questão original\"; removido, pois é caso fictício. Não há selo de ficção na arte (Q76). Pontos de corte de Hb: OMS 2011 usava 11,0 g/dL para 6–59 meses; a diretriz OMS 2024 revisou os cortes por faixa etária. O card evita citar o corte (Hb 9,5 é anemia em qualquer dos critérios); o professor deve conferir. Os valores de VCM (66 fL) e ferritina (6 ng/mL) foram escolhidos para ficar claramente abaixo dos limites da idade. v1.1: redesenho; conteúdo da v1 mantido.",
   "candidato_reel": "não por ora",
-  "legenda": "14 meses, pálido, um litro de leite de vaca por dia. Caso clínico fictício, elaborado pela equipe Aristo para fins didáticos. Microcitose pede três checagens antes do diagnóstico. Salve o roteiro e siga a Aristo. #Aristo #Pediatria #ResidenciaMedica",
+  "legenda": "Uma criança de 14 meses, pálida, toma um litro de leite de vaca por dia. Diante da microcitose, o que você precisa conferir antes de concluir o diagnóstico? Caso clínico fictício, elaborado pela equipe Aristo para fins didáticos. Salve o roteiro e siga a Aristo. #Aristo #Pediatria #ResidenciaMedica",
   "tema": "Anemia ferropriva na infância",
   "dificuldade": "Não classificada",
   "status_cientifico": "PENDENTE: revisão docente",
