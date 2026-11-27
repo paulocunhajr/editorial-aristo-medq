@@ -53,7 +53,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito B: investigar as adultas e tratar a criança.'},
   'fecho': 'Com tuberculose em casa, quem tem 1 mês de vida não espera exame.',
   'legenda': 'Bebê de 1 mês, sem vacina, morando com um paciente com tuberculose: 43% erraram a conduta na USP-SP 2024. Tratar, investigar '
-             'ou vacinar? A resposta está no carrossel. Dados da plataforma Aristo. A USP-SP é domingo, 06/12. #Aristo #USP #Tuberculose '
+             'ou vacinar? A resposta está no carrossel. A USP-SP é domingo, 06/12. #Aristo #USP #Tuberculose '
              '#ResidenciaMedica',
   'pergunta': 'Você trataria antes de investigar? Conte nos comentários.'},
  {'id': 'MEDQ-20261130-01',
@@ -91,7 +91,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito A: úlcera aberta é C6.'},
   'fecho': 'Cicatrizada é C5. Aberta é C6. A questão inteira cabe nessa diferença.',
   'legenda': 'Úlcera venosa aberta nas duas pernas, e 44% dos alunos a classificaram como cicatrizada. Só 29,4% acertaram a CEAP no IPSEMG '
-             '2024. Veja no carrossel onde termina o C5. Dados da plataforma Aristo. O IPSEMG é domingo, 06/12. #MedQ #IPSEMG '
+             '2024. Veja no carrossel onde termina o C5. O IPSEMG é domingo, 06/12. #MedQ #IPSEMG '
              '#CirurgiaVascular #ResidenciaMedica',
   'pergunta': 'Você teria marcado C5? Diga nos comentários.'},
  {'id': 'ARISTO-20261201-01',
@@ -127,7 +127,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito A: ganha-se VPN e paga-se com falsos positivos.'},
   'fecho': 'Nenhum teste é de graça. Antes de trocar, pergunte qual erro você aceita.',
   'legenda': 'Trocar o teste rápido de influenza por um mais sensível parece só vantagem. 46% erraram o preço dessa troca no IPSEMG 2024. '
-             'No carrossel, o que sobe e o que cai. Dados da plataforma Aristo. O IPSEMG é domingo, 06/12. #Aristo #IPSEMG #Epidemiologia '
+             'No carrossel, o que sobe e o que cai. O IPSEMG é domingo, 06/12. #Aristo #IPSEMG #Epidemiologia '
              '#ResidenciaMedica',
   'pergunta': 'Na sua urgência, qual teste você usaria? Comente.'},
  {'id': 'MEDQ-20261201-01',
@@ -177,7 +177,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito B: a convulsão era por hipocalcemia.'},
   'fecho': 'A glicemia está no enunciado justamente para você descartar a glicose.',
   'legenda': 'Prematuro de 800 g convulsionando, e metade da prova foi direto para a glicose: 50,5% aumentaram o soro na USP-SP 2024. A '
-             'causa era outra, e só 32,4% acertaram. Veja no carrossel o dado que desmonta a hipoglicemia. Dados da plataforma Aristo. A '
+             'causa era outra, e só 32,4% acertaram. Veja no carrossel o dado que desmonta a hipoglicemia. A '
              'USP-SP é domingo, 06/12. #MedQ #USP #Neonatologia #ResidenciaMedica',
   'pergunta': 'Qual exame você pediria primeiro? Responda nos comentários.'},
  {'id': 'ARISTO-20261202-01',
@@ -223,7 +223,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito C: corticoide inalatório em dose baixa.'},
   'fecho': 'Crise grave não define o degrau da manutenção. A escada começa no mesmo lugar.',
   'legenda': '3 anos e três internações por asma em seis meses: 41% pularam degraus e associaram broncodilatador de longa duração na '
-             'USP-SP 2024. No carrossel, o primeiro degrau para essa idade. Dados da plataforma Aristo. A USP-SP é domingo, 06/12. #Aristo '
+             'USP-SP 2024. No carrossel, o primeiro degrau para essa idade. A USP-SP é domingo, 06/12. #Aristo '
              '#USP #Pediatria #ResidenciaMedica',
   'pergunta': 'O que você prescreveria na alta? Comente.'},
  {'id': 'MEDQ-20261202-01',
@@ -260,7 +260,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito D: idade não entra na D’Amico.'},
   'fecho': 'T, Gleason e PSA. A idade fica para a conversa sobre tratamento.',
   'legenda': 'PSA fora da classificação de D’Amico? 39,5% dos alunos acharam que sim no IPSEMG 2024, e só 36% acertaram. No carrossel, os '
-             'três critérios e os três grupos de risco. Dados da plataforma Aristo. O IPSEMG é domingo, 06/12. #MedQ #IPSEMG #Urologia '
+             'três critérios e os três grupos de risco. O IPSEMG é domingo, 06/12. #MedQ #IPSEMG #Urologia '
              '#ResidenciaMedica',
   'pergunta': 'Você teria caído no comando negativo? Conte nos comentários.'},
  {'id': 'ARISTO-20261203-01',
@@ -299,7 +299,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito C: indução mecânica, sem misoprostol.'},
   'fecho': 'Ela pode tentar o parto normal. O que muda é o método de indução.',
   'legenda': '41 semanas, uma cesárea anterior e uma gestante que quer parto normal: 48,2% erraram a conduta no IPSEMG 2024. Misoprostol, '
-             'cesárea ou outra saída? Veja no carrossel. Dados da plataforma Aristo. O IPSEMG é domingo, 06/12. #Aristo #IPSEMG '
+             'cesárea ou outra saída? Veja no carrossel. O IPSEMG é domingo, 06/12. #Aristo #IPSEMG '
              '#Obstetricia #ResidenciaMedica',
   'pergunta': 'Você já induziu com Krause? Conte nos comentários.'},
  {'id': 'MEDQ-20261203-01',
@@ -334,7 +334,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito D: pupilas médio-fixas indicam mesencéfalo.'},
   'fecho': 'No coma, a lanterna localiza a lesão antes da tomografia.',
   'legenda': 'Coma com pupilas médio-fixas: 41,1% dos alunos apontaram a ponte na USP-SP 2024, e só 22,5% acertaram a topografia. No '
-             'carrossel, como a pupila localiza a lesão. Dados da plataforma Aristo. A USP-SP é domingo, 06/12. #MedQ #USP #Neurologia '
+             'carrossel, como a pupila localiza a lesão. A USP-SP é domingo, 06/12. #MedQ #USP #Neurologia '
              '#ResidenciaMedica',
   'pergunta': 'Qual achado você olha primeiro? Comente.'},
  {'id': 'ARISTO-20261204-01',
@@ -376,7 +376,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito D: referência terciária, com a UBS junto.'},
   'fecho': 'Encaminhar não é passar o paciente adiante e esquecer dele.',
   'legenda': 'TRM-TB com resistência à rifampicina: 39% iniciaram o tratamento na própria UBS, e mais da metade errou a conduta na USP-SP '
-             '2024. No carrossel, o que fica com a referência e o que fica com a UBS. Dados da plataforma Aristo. A USP-SP é domingo, '
+             '2024. No carrossel, o que fica com a referência e o que fica com a UBS. A USP-SP é domingo, '
              '06/12. #Aristo #USP #Tuberculose #ResidenciaMedica',
   'pergunta': 'Na sua UBS, como funciona esse encaminhamento? Comente.'},
  {'id': 'MEDQ-20261204-01',
@@ -412,7 +412,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito A: nulípara com feto pélvico é Robson 6.'},
   'fecho': 'Na Robson, uma palavra do enunciado muda o grupo.',
   'legenda': 'Primeira gestação, bebê pélvico: quase 7 em cada 10 alunos erraram o grupo de Robson no IPSEMG 2024, e 33,1% marcaram o '
-             'grupo 7. No carrossel, os grupos que a banca colocou lado a lado. Dados da plataforma Aristo. O IPSEMG é domingo, 06/12. '
+             'grupo 7. No carrossel, os grupos que a banca colocou lado a lado. O IPSEMG é domingo, 06/12. '
              '#MedQ #IPSEMG #Obstetricia #ResidenciaMedica',
   'pergunta': 'Você sabe os 10 grupos de cor? Conte nos comentários.'},
  {'id': 'ARISTO-20261205-01',
@@ -454,7 +454,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito B: o tipo intestinal se espalha por via hematogênica.'},
   'fecho': 'Quem tinha a tabela intestinal contra difuso na cabeça resolveu em segundos.',
   'legenda': 'Câncer gástrico do tipo intestinal: 48% dos alunos não souberam como ele se espalha no IPSEMG 2024. No carrossel, intestinal '
-             'e difuso lado a lado. Dados da plataforma Aristo. O IPSEMG é amanhã, 06/12. #Aristo #IPSEMG #Cirurgia #ResidenciaMedica',
+             'e difuso lado a lado. O IPSEMG é amanhã, 06/12. #Aristo #IPSEMG #Cirurgia #ResidenciaMedica',
   'pergunta': 'Qual característica você confundiria? Comente.'},
  {'id': 'MEDQ-20261205-01',
   'marca': 'MedQ',
@@ -496,7 +496,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito C: a inspeção na cirurgia descartou lesão abdominal.'},
   'fecho': 'Às vezes a melhor conduta é não pedir mais nenhum exame.',
   'legenda': 'Facada no tórax, toracotomia já feita, e 89% erraram o que fazer com o abdome na USP-SP 2024: 38,1% pediram tomografia. No '
-             'carrossel, o achado da cirurgia que já respondia a questão. Dados da plataforma Aristo. A USP-SP é amanhã, 06/12. #MedQ #USP '
+             'carrossel, o achado da cirurgia que já respondia a questão. A USP-SP é amanhã, 06/12. #MedQ #USP '
              '#Trauma #ResidenciaMedica',
   'pergunta': 'Você teria pedido a tomografia? Comente.'},
  {'id': 'ARISTO-20261206-01',
@@ -538,7 +538,7 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito B: tratar primeiro e investigar se não melhorar.'},
   'fecho': 'Hoje é dia de prova. Sem massa no exame, trate primeiro. Boa prova.',
   'legenda': 'Cólica menstrual aos 20 anos: na USP-SP 2024, até entre os melhores alunos mais da metade errou. O problema era a ordem da '
-             'conduta. Veja no carrossel. Dados da plataforma Aristo. Hoje é dia de USP-SP: boa prova. #Aristo #USP #Ginecologia '
+             'conduta. Veja no carrossel. Hoje é dia de USP-SP: boa prova. #Aristo #USP #Ginecologia '
              '#ResidenciaMedica',
   'pergunta': 'Depois conte como foi a prova.'},
  {'id': 'MEDQ-20261206-01',
@@ -570,5 +570,5 @@ POSTS = [{'id': 'ARISTO-20261130-01',
            'gabarito': 'Gabarito D: hepatite B em 4 doses.'},
   'fecho': 'Hoje é dia de prova. Prematuro se vacina pela idade cronológica, e a hepatite B ganha uma dose a mais. Boa prova.',
   'legenda': 'Prematuro saindo da UTI: 56% erraram o calendário de vacinas no IPSEMG 2024. Idade corrigida ou cronológica? Veja no '
-             'carrossel. Dados da plataforma Aristo. Hoje é dia de IPSEMG: boa prova. #MedQ #IPSEMG #Pediatria #ResidenciaMedica',
+             'carrossel. Hoje é dia de IPSEMG: boa prova. #MedQ #IPSEMG #Pediatria #ResidenciaMedica',
   'pergunta': 'Depois conte como foi a prova.'}]

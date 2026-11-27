@@ -35,6 +35,22 @@ TEXTO_OPC_V11 = {
 
 
 def fichas():
+    rev = P1 / '_recebido' / 'piloto_mestre_v1_1_revisado_humanizar.json'
+    if rev.exists():  # revisão de texto de 27/11 (branch revisao-humanizar-2026-11-27) é a fonte
+        out = []
+        for r in json.loads(rev.read_text()):
+            folder = OUT / r['marca'] / r['data_prevista'] / 'post-01'
+            r['imagens'] = sorted(x.relative_to(OUT).as_posix() for x in folder.glob('*.png'))
+            r['n_cards'] = len(r['imagens'])
+            r['notas_auditoria'] = r['notas_auditoria'].rstrip() + ' v1.1b: numeração e área retiradas das artes (pedido de 27/11).' if 'v1.1b' not in r['notas_auditoria'] else r['notas_auditoria']
+            (folder / 'legenda.txt').write_text(r['legenda'] + '\n', encoding='utf-8')
+            (folder / 'ficha.json').write_text(json.dumps(r, ensure_ascii=False, indent=2), encoding='utf-8')
+            out.append(r)
+        return out
+    return _fichas_v11()
+
+
+def _fichas_v11():
     base = {r['id']: r for r in json.loads((P1 / '_recebido' / 'piloto_mestre_v1_154.json').read_text())}
     out = []
     for i in IDS:

@@ -132,14 +132,13 @@ def cards(p, split=False):
 <div class='top' style='margin-top:120px'><span>Prova real • {prova}</span></div>
 <h1 style='font-size:{84 if len(c["headline"]) < 70 else 72 if len(c["headline"]) < 90 else 64}px'>{fmt(c['headline'])}</h1>
 <div class='dado'>{fmt(c['dado'])}</div>
-<div class='fonte'>Dados da plataforma Aristo · {prova}</div>
 <div class='bubble' style='margin-top:52px'>Veja a questão ›</div>
-<div class='meta'>{html.escape(p['area'])} • {html.escape(p['tema'])}{f' • prova em {data_prova}' if data_prova else ''}</div>
+
 {logo(t)}""", BLOB_TR.format(c=t['acc'])))
 
     alts = ''.join(f"<div class='alt'><b>{k}</b><span>{fmt(v)}</span></div>" for k, v in p['alternativas'].items())
     cmd = f"<div class='cmd'>{fmt(p['comando'])}</div>" if p['comando'] else ''
-    head = lambda tit: f"<div class='top'><span>{prova} • {tit}</span><i>{{n}}</i></div>"
+    head = lambda tit: f"<div class='top'><span>{prova} • {tit}</span></div>"
     partes = p['enunciado'] if isinstance(p['enunciado'], list) else [p['enunciado']]
     if p.get('imagem') or split or len(partes) > 1:
         img = f"<div class='img'><img src='{b64(GER / p['imagem'])}'></div>" if p.get('imagem') else ''

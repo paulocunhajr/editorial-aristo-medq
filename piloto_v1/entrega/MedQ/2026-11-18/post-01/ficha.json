@@ -20,10 +20,10 @@
     "ACOG. Fertility Awareness-Based Methods of Family Planning (FAQ). https://www.acog.org/womens-health/faqs/fertility-awareness-based-methods-of-family-planning"
   ],
   "justificativa_selecao": "Questão íntegra com erro clássico (alternativa C) que se resolve visualmente. Discriminação indisponível: pesos renormalizados (1/3 cada).",
-  "texto_opcional_carrossel": "Escolhemos esta questão porque a alternativa errada mais atraente usa um número verdadeiro (14) no lugar errado.",
-  "notas_auditoria": "A v1 substitui a linha de 3 pontos por um diagrama vetorial de 28/30/35 dias. O print IMG_4714 dizia que a fase lútea dura 13–14 dias \"sempre\"; a absolutização não foi reproduzida e o card 5 explicita a variação. O \"29% erraram\" do print IMG_4712 não é auditável e não foi usado. Conferir com a prova original: texto literal, existência de alternativa E e gabarito oficial. Até lá, não pode ir a PRONTO. v1.1: redesenho; rodapé \"Marque a sua\" passa a ficar no fluxo do card (não sobrepõe a alternativa D). Bloqueio de PRONTO mantido: os prints IMG_4713–4721 e a prova original não foram recebidos nesta sessão (ZIP de transferência inacessível), então a transcrição não pôde ser reconferida.",
+  "texto_opcional_carrossel": "A alternativa C conta os 14 dias a partir do início da menstruação, em vez de usar a estimativa da próxima.",
+  "notas_auditoria": "A v1 substitui a linha de 3 pontos por um diagrama vetorial de 28/30/35 dias. O print IMG_4714 dizia que a fase lútea dura 13–14 dias \"sempre\"; a absolutização não foi reproduzida e o card 5 explicita a variação. O \"29% erraram\" do print IMG_4712 não é auditável e não foi usado. Conferir com a prova original: texto literal, existência de alternativa E e gabarito oficial. Até lá, não pode ir a PRONTO. v1.1: redesenho; rodapé \"Marque a sua\" passa a ficar no fluxo do card (não sobrepõe a alternativa D). Bloqueio de PRONTO mantido: os prints IMG_4713–4721 e a prova original não foram recebidos nesta sessão (ZIP de transferência inacessível), então a transcrição não pôde ser reconferida. v1.1b: numeração e área retiradas das artes (pedido de 27/11).",
   "candidato_reel": "não por ora",
-  "legenda": "Ciclo de 30 dias: a ovulação não cai no 14º dia. Conte 14 dias para trás a partir da próxima menstruação (HA-SP 2017). Salve para a revisão de Ginecologia e siga o MedQ. #MedQ #Ginecologia #ResidenciaMedica",
+  "legenda": "Dia 14 ou dia 16? Em um ciclo de 30 dias, a ovulação é estimada no 16º. A questão do HA-SP 2017 cobra a referência correta para fazer esse cálculo. Confira o erro da alternativa C. #MedQ #Ginecologia #ResidenciaMedica",
   "tema": "Ciclo menstrual e ovulação",
   "dificuldade": "Média*",
   "status_cientifico": "PENDENTE: revisão docente",

@@ -129,7 +129,7 @@ body{{font-family:'Public Sans';color:{c['ink']};-webkit-font-smoothing:antialia
 
 def head(c, k, dark=False):
     dot = "<div class='dot'></div>" if c['marca'] == 'MedQ' and not dark else ''
-    return f"<div class='top'><div class='k'>{dot}<span class='t'>{html.escape(k)}</span></div><div class='n t'>{{N}}</div></div><!--/head-->"
+    return f"<div class='top'><div class='k'>{dot}<span class='t'>{html.escape(k)}</span></div></div><!--/head-->"
 
 
 def logo(m, dark):

@@ -10,7 +10,7 @@ POSTS = []
 POSTS.append(dict(
     id='MEDQ-20261116-01', marca='MedQ', data='2026-11-16',
     cards=[
-        dict(t='m_capa', kicker='Questão do dia · Epidemiologia',
+        dict(t='m_capa', kicker='Questão do dia',
              titulo='Coorte ou ensaio **clínico**?',
              sub='Uma única pergunta separa os dois. A banca sabe disso.', botao='Responda antes de deslizar'),
         dict(t='m_questao', kicker='Questão original', badge='SCMGO · GO · 2022',
@@ -41,7 +41,7 @@ POSTS.append(dict(
 POSTS.append(dict(
     id='MEDQ-20261117-01', marca='MedQ', data='2026-11-17',
     cards=[
-        dict(t='m_capa', kicker='Caso clínico · Infectologia',
+        dict(t='m_capa', kicker='Caso clínico',
              titulo='5º dia de dengue. A febre foi **embora**.',
              sub='Ela está melhorando? Leia o caso antes de responder.', botao='Qual é a sua conduta?'),
         dict(t='m_caso', kicker='O caso',
@@ -75,7 +75,7 @@ POSTS.append(dict(
 POSTS.append(dict(
     id='MEDQ-20261118-01', marca='MedQ', data='2026-11-18',
     cards=[
-        dict(t='m_capa', kicker='Questão do dia · Ginecologia',
+        dict(t='m_capa', kicker='Questão do dia',
              titulo='Ciclo de 30 dias. Você marcaria o **dia 14**?',
              sub='Se marcou, esta questão foi feita para você.', botao='Responda antes de deslizar'),
         dict(t='m_questao', kicker='Questão original', badge='HA-SP · SP · 2017',
@@ -103,7 +103,7 @@ POSTS.append(dict(
 POSTS.append(dict(
     id='ARISTO-20261123-01', marca='Aristo', data='2026-11-23',
     cards=[
-        dict(t='a_capa', kicker='Questão do dia · Raciocínio',
+        dict(t='a_capa', kicker='Questão do dia',
              titulo='Pare de decorar os tipos de estudo.',
              sub='Quatro perguntas classificam os desenhos que mais caem. Teste o roteiro numa questão real.'),
         dict(t='a_roteiro', kicker='O roteiro', titulo='Quatro perguntas, nesta ordem',
@@ -140,7 +140,7 @@ POSTS.append(dict(
 POSTS.append(dict(
     id='ARISTO-20261124-01', marca='Aristo', data='2026-11-24',
     cards=[
-        dict(t='a_capa', kicker='Caso clínico · Pediatria',
+        dict(t='a_capa', kicker='Caso clínico',
              titulo='14 meses, pálido e um litro de leite por dia.',
              sub='Antes de olhar os exames: o que você já suspeita? Depois, confira se os números concordam.'),
         dict(t='a_caso', kicker='O caso',
@@ -168,7 +168,7 @@ POSTS.append(dict(
 POSTS.append(dict(
     id='ARISTO-20261125-01', marca='Aristo', data='2026-11-25',
     cards=[
-        dict(t='a_capa', kicker='Questão do dia · Ginecologia',
+        dict(t='a_capa', kicker='Questão do dia',
              titulo='Dia 14 só vale para ciclo de 28.',
              sub='Para os outros ciclos, uma subtração resolve. Veja na questão.'),
         dict(t='a_questao', kicker='Questão original', badge='HA-SP · SP · 2017',
