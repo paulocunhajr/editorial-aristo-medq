@@ -1,0 +1,192 @@
+# Piloto v1.1: conteúdo dos 6 carrosséis autorizados (Gate 1).
+# Base: v1 de 15/11/2026 (fichas em _recebido/piloto_mestre_v1_154.json e renders no Git, commit bfc8614).
+# Mudanças da v1.1 estão em ../QA_PILOTO_V1_1.md. Nada aqui é dado de desempenho.
+#
+# Marcação: **x** = destaque (negrito na cor da marca); quebras de linha explícitas com \n.
+
+POSTS = []
+
+# ───────────────────────────── MedQ 16/11 · SCMGO 2022 · coorte ─────────────────────────────
+POSTS.append(dict(
+    id='MEDQ-20261116-01', marca='MedQ', data='2026-11-16',
+    cards=[
+        dict(t='m_capa', kicker='Questão do dia · Epidemiologia',
+             titulo='Coorte ou ensaio **clínico**?',
+             sub='Uma única pergunta separa os dois. A banca sabe disso.', botao='Responda antes de deslizar'),
+        dict(t='m_questao', kicker='Questão original', badge='SCMGO · GO · 2022',
+             enunciado='O estudo de coorte:',
+             alts={'A': 'É individuado, observacional e longitudinal.',
+                   'B': 'Apresenta alocação aleatória dos participantes.',
+                   'C': 'Tem custo menos elevado do que o estudo de casos.',
+                   'D': 'Necessita de mascaramento duplo cego para ser efetivo.'},
+             rodape='Marque a sua e deslize para conferir.'),
+        dict(t='m_resolucao', kicker='Resolução', gab='A',
+             gab_txt='É individuado, observacional e longitudinal.',
+             itens=[('x', 'B', 'Alocação aleatória é marca do ensaio clínico randomizado: quem define a exposição é o pesquisador.'),
+                    ('x', 'C', 'Coorte costuma exigir mais tempo e recursos do que estudos de casos e controles.'),
+                    ('x', 'D', 'Duplo-cego é recurso de ensaio clínico. Na coorte não há intervenção a mascarar.')]),
+        dict(t='m_palavras', kicker='O que cada palavra cobra', titulo='Decifre a alternativa A',
+             itens=[('cyan', 'Individuado', 'Os dados são de cada participante, não de grupos inteiros (como no estudo ecológico).'),
+                    ('lilas', 'Observacional', 'O pesquisador não intervém: apenas observa quem já está exposto ou não.'),
+                    ('roxo', 'Longitudinal', 'Acompanha os participantes no tempo, da exposição até o desfecho.')]),
+        dict(t='m_erro', kicker='Onde a questão derruba',
+             erro='Achar que "acompanhar no tempo" transforma o estudo em ensaio clínico.',
+             certo='Coorte e ensaio clínico são longitudinais. O que os separa é quem define a exposição: na coorte, ninguém a atribui; no ensaio, o pesquisador atribui.'),
+        dict(t='m_final', kicker='Antes de sair', titulo='Errou? Ótimo momento para descobrir.',
+             sub='Melhor aqui do que no dia da prova. Guarde esta questão para a revisão de Saúde Coletiva.',
+             botoes=['Salve para revisar', 'Envie para quem estuda com você']),
+    ]))
+
+# ───────────────────────────── MedQ 17/11 · caso fictício · dengue ─────────────────────────────
+POSTS.append(dict(
+    id='MEDQ-20261117-01', marca='MedQ', data='2026-11-17',
+    cards=[
+        dict(t='m_capa', kicker='Caso clínico · Infectologia',
+             titulo='5º dia de dengue. A febre foi **embora**.',
+             sub='Ela está melhorando? Leia o caso antes de responder.', botao='Qual é a sua conduta?'),
+        dict(t='m_caso', kicker='O caso',
+             texto='Mulher, 29 anos, no 5º dia de doença febril com mialgia e cefaleia, quadro compatível com dengue. Hoje a febre cedeu, mas surgiram **dor abdominal intensa e contínua** e **vômitos persistentes**.',
+             exame_titulo='Exame físico',
+             exame='PA 118 x 76 mmHg (sem queda postural), FC 96 bpm, sem sangramentos, sem desconforto respiratório.',
+             pergunta='Qual é a conduta mais adequada agora?'),
+        dict(t='m_alts', kicker='Alternativas',
+             alts={'A': 'Alta com orientações, já que a febre cedeu.',
+                   'B': 'Hidratação oral e reavaliação ambulatorial em 48 horas.',
+                   'C': 'Classificar como dengue com sinais de alarme, iniciar hidratação venosa imediata e manter em leito de internação.',
+                   'D': 'Prescrever anti-inflamatório para a dor e orientar retorno se a febre voltar.'}),
+        dict(t='m_resolucao', kicker='Resolução', gab='C',
+             gab_txt='Sinais de alarme = grupo C: hidratação venosa já e internação.',
+             itens=[('x', 'A e B', 'A defervescência costuma marcar o início da fase crítica. Não é sinal de alta.'),
+                    ('x', 'D', 'Anti-inflamatórios são contraindicados na dengue: aumentam o risco de sangramento.'),
+                    ('ok', 'C', 'Reposição volêmica imediata (10 mL/kg de SF 0,9% na 1ª hora) em qualquer ponto de atenção e leito de internação até estabilizar, por no mínimo 48 horas.')]),
+        dict(t='m_fases', kicker='Por que a febre engana', titulo='As três fases da dengue',
+             nota='Defervescência, em geral entre o 3º e o 7º dia: começa a fase crítica.',
+             sinais_titulo='Sinais de alarme (Ministério da Saúde)',
+             sinais=['Dor abdominal intensa e contínua', 'Vômitos persistentes', 'Acúmulo de líquidos (ascite, derrames)',
+                     'Hipotensão postural e/ou lipotimia', 'Hepatomegalia > 2 cm do rebordo costal', 'Sangramento de mucosa',
+                     'Letargia e/ou irritabilidade', 'Aumento progressivo do hematócrito']),
+        dict(t='m_erro', kicker='Onde a questão derruba',
+             erro='Ler a queda da febre como sinal de melhora e dar alta.',
+             certo='Na dengue, a defervescência é o momento de vigiar. Pergunte ativamente pelos sinais de alarme no dia em que a febre cede.',
+             cta='Salve para o plantão e compartilhe com quem está revisando Infectologia.'),
+    ]))
+
+# ───────────────────────────── MedQ 18/11 · HA-SP 2017 · ovulação ─────────────────────────────
+POSTS.append(dict(
+    id='MEDQ-20261118-01', marca='MedQ', data='2026-11-18',
+    cards=[
+        dict(t='m_capa', kicker='Questão do dia · Ginecologia',
+             titulo='Ciclo de 30 dias. Você marcaria o **dia 14**?',
+             sub='Se marcou, esta questão foi feita para você.', botao='Responda antes de deslizar'),
+        dict(t='m_questao', kicker='Questão original', badge='HA-SP · SP · 2017',
+             enunciado='A ovulação de uma mulher com ciclos menstruais de 30 dias, geralmente acontece:',
+             alts={'A': 'Somente quando ela tiver relações sexuais.',
+                   'B': 'Simultaneamente com a menstruação.',
+                   'C': '14 dias após o início da menstruação.',
+                   'D': '14 dias antes do início da menstruação.'},
+             rodape='Marque a sua e deslize para conferir.'),
+        dict(t='m_resolucao', kicker='Resolução', gab='D',
+             gab_txt='14 dias antes do início da próxima menstruação.',
+             itens=[('x', 'A', 'A ovulação humana é espontânea, comandada pelo eixo hipotálamo-hipófise-ovário, e não depende do coito.'),
+                    ('x', 'B', 'A menstruação vem cerca de 14 dias depois da ovulação, quando o corpo lúteo regride.'),
+                    ('x', 'C', 'Contar 14 dias a partir do início só coincide com ciclos de 28 dias.')]),
+        dict(t='m_ciclos', kicker='Explicação visual', titulo='O que varia é a primeira metade',
+             ciclos=[(28, 14), (30, 16), (35, 21)],
+             nota='Ovulação estimada = duração do ciclo menos 14. Em 30 dias: por volta do dia 16.'),
+        dict(t='m_erro', kicker='Onde a questão derruba',
+             erro='Contar 14 dias a partir do início da menstruação, em qualquer ciclo.',
+             certo='Conte 14 dias para trás a partir da próxima menstruação. É uma estimativa: a fase lútea é relativamente constante, mas também varia entre mulheres.',
+             cta='Salve para a revisão de Ginecologia e siga o MedQ para a próxima questão.'),
+    ]))
+
+# ───────────────────────────── Aristo 23/11 · SCMGO 2022 · roteiro ─────────────────────────────
+POSTS.append(dict(
+    id='ARISTO-20261123-01', marca='Aristo', data='2026-11-23',
+    cards=[
+        dict(t='a_capa', kicker='Questão do dia · Raciocínio',
+             titulo='Pare de decorar os tipos de estudo.',
+             sub='Quatro perguntas classificam os desenhos que mais caem. Teste o roteiro numa questão real.'),
+        dict(t='a_roteiro', kicker='O roteiro', titulo='Quatro perguntas, nesta ordem',
+             itens=[('Quem define a exposição?', ['O pesquisador: experimental', 'Ninguém, só se observa: observacional']),
+                    ('A unidade é a pessoa ou o grupo?', ['Pessoa: individuado', 'Grupo ou população: agregado (ecológico)']),
+                    ('Há seguimento no tempo?', ['Sim: longitudinal', 'Não, um só momento: transversal']),
+                    ('Parte da exposição ou do desfecho?', ['Da exposição: coorte', 'Do desfecho: caso-controle'])]),
+        dict(t='a_questao', kicker='Questão original', badge='SCMGO · GO · 2022',
+             enunciado='O estudo de coorte:',
+             alts={'A': 'É individuado, observacional e longitudinal.',
+                   'B': 'Apresenta alocação aleatória dos participantes.',
+                   'C': 'Tem custo menos elevado do que o estudo de casos.',
+                   'D': 'Necessita de mascaramento duplo cego para ser efetivo.'}),
+        dict(t='a_aplicando', kicker='Aplicando o roteiro', titulo='Gabarito A',
+             linhas=[('1. Quem define a exposição?', 'Ninguém. Observacional.'),
+                     ('2. Pessoa ou grupo?', 'Pessoa. Individuado.'),
+                     ('3. Seguimento no tempo?', 'Sim. Longitudinal.'),
+                     ('4. Parte de onde?', 'Da exposição. Coorte.')],
+             descarte=[('B e D', 'Alocação aleatória e duplo-cego pressupõem intervenção: são de ensaio clínico.'),
+                       ('C', 'Coorte costuma ser mais cara e demorada que estudos de casos e controles.')]),
+        dict(t='a_tabela', kicker='Para a revisão', titulo='Três desenhos lado a lado',
+             colunas=['Coorte', 'Caso-controle', 'Ensaio clínico'],
+             linhas=[('Exposição', ['observada', 'observada', 'atribuída']),
+                     ('Ponto de partida', ['exposição', 'desfecho', 'intervenção']),
+                     ('Medida típica', ['risco relativo', 'odds ratio', 'risco relativo, NNT']),
+                     ('Custo e tempo', ['maiores', 'menores', 'maiores'])],
+             nota='Na coorte retrospectiva, custo e tempo podem ser menores.'),
+        dict(t='a_final', kicker='Para a sua revisão', titulo='Leve o roteiro para a prova',
+             itens=['Quem define a exposição?', 'A unidade é a pessoa ou o grupo?', 'Há seguimento no tempo?', 'Parte da exposição ou do desfecho?'],
+             balao='Salve para a revisão'),
+    ]))
+
+# ───────────────────────────── Aristo 24/11 · caso fictício · anemia ─────────────────────────────
+POSTS.append(dict(
+    id='ARISTO-20261124-01', marca='Aristo', data='2026-11-24',
+    cards=[
+        dict(t='a_capa', kicker='Caso clínico · Pediatria',
+             titulo='14 meses, pálido e um litro de leite por dia.',
+             sub='Antes de olhar os exames: o que você já suspeita? Depois, confira se os números concordam.'),
+        dict(t='a_caso', kicker='O caso',
+             texto='Menino de 14 meses em consulta de puericultura. A mãe conta que ele toma cerca de 1 litro de leite de vaca integral por dia e aceita pouca comida. Está pálido, sem visceromegalias e sem infecções nas últimas 4 semanas.',
+             exames=[('Hemoglobina', '9,5 g/dL'), ('VCM', '66 fL'), ('RDW', '17,5%'), ('Ferritina', '6 ng/mL'), ('PCR', 'normal')]),
+        dict(t='a_alts', kicker='Sua resposta', titulo='Qual é o diagnóstico mais provável?',
+             alts={'A': 'Anemia ferropriva.', 'B': 'Traço talassêmico isolado.',
+                   'C': 'Anemia hemolítica autoimune.', 'D': 'Anemia megaloblástica por deficiência de B12.'}),
+        dict(t='a_numerado', kicker='O roteiro', titulo='Microcitose: três checagens antes de fechar',
+             itens=[('Ferritina, lida junto da PCR', 'Ferritina baixa confirma estoque depletado. Como sobe na inflamação, um valor normal com PCR alta não exclui deficiência.'),
+                    ('RDW', 'Elevado na ferropenia (hemácias de tamanhos variados). No traço talassêmico costuma ser normal.'),
+                    ('História', 'Excesso de leite de vaca e dieta pobre em ferro explicam a deficiência e orientam a conduta.')]),
+        dict(t='a_resolucao', kicker='Resolução', titulo='Gabarito A: anemia ferropriva',
+             lead='Anemia (Hb 9,5 g/dL), microcitose, RDW alto e ferritina baixa com PCR normal, num contexto de excesso de leite de vaca.',
+             itens=[('B', 'Traço talassêmico: ferritina normal e RDW geralmente normal.'),
+                    ('C', 'Hemólise autoimune: reticulocitose e bilirrubina indireta alta, sem ferritina baixa.'),
+                    ('D', 'Megaloblástica: macrocitose (VCM alto), não microcitose.')],
+             conduta='Conduta inicial: ferro elementar por via oral, redução do excesso de leite de vaca e reavaliação da resposta.'),
+        dict(t='a_final', kicker='Para a sua revisão', titulo='Microcitose não é diagnóstico',
+             itens=['Ferritina com PCR', 'RDW', 'História alimentar e de perdas'],
+             balao='Salve o roteiro'),
+    ]))
+
+# ───────────────────────────── Aristo 25/11 · HA-SP 2017 · calendário ─────────────────────────────
+POSTS.append(dict(
+    id='ARISTO-20261125-01', marca='Aristo', data='2026-11-25',
+    cards=[
+        dict(t='a_capa', kicker='Questão do dia · Ginecologia',
+             titulo='Dia 14 só vale para ciclo de 28.',
+             sub='Para os outros ciclos, uma subtração resolve. Veja na questão.'),
+        dict(t='a_questao', kicker='Questão original', badge='HA-SP · SP · 2017',
+             enunciado='A ovulação de uma mulher com ciclos menstruais de 30 dias, geralmente acontece:',
+             alts={'A': 'Somente quando ela tiver relações sexuais.',
+                   'B': 'Simultaneamente com a menstruação.',
+                   'C': '14 dias após o início da menstruação.',
+                   'D': '14 dias antes do início da menstruação.'}),
+        dict(t='a_calendario', kicker='Método', titulo='Conte de trás para frente',
+             dias=30, ovulacao=16,
+             nota='Ciclo de 30 dias: 30 menos 14 = dia\u00a016.'),
+        dict(t='a_resolucao', kicker='Resolução', titulo='Gabarito D',
+             lead='O dia 16 de um ciclo de 30 dias fica 14 dias antes do início da próxima menstruação.',
+             itens=[('C', 'A pegadinha: "14 dias após o início" só acerta em ciclos de 28 dias.'),
+                    ('A', 'A ovulação é espontânea, regulada pelo eixo hipotálamo-hipófise-ovário.'),
+                    ('B', 'A menstruação acontece cerca de 14 dias depois da ovulação, não junto com ela.')],
+             destaque='C'),
+        dict(t='a_final', kicker='Para a sua revisão', titulo='Três frases para a revisão',
+             itens=['A fase folicular é a que varia.', 'A fase lútea dura cerca de 14 dias.', 'Ovulação estimada = ciclo menos 14.'],
+             balao='Salve para a revisão'),
+    ]))
