@@ -22,7 +22,7 @@
   "texto_opcional_carrossel": "Caso construído pela equipe para treinar a leitura dos sinais de alarme.",
   "notas_auditoria": "v0 dizia \"avaliação hospitalar imediata\", o que era vago. A v1 descreve a conduta do grupo C e foi conferida no fluxograma oficial do MS. Os sinais de alarme do card 5 são transcritos da lista do MS. AINE contraindicado. A ficção é identificada só na legenda e no HTML (Q76). Risco: card compartilhado sem legenda pode parecer caso real. v1.1: resolução do card 4 passa a citar a conduta completa do grupo C (10 mL/kg de SF 0,9% na 1ª hora; leito por no mínimo 48 h), já registrada no conceito decisivo da v1; dor e vômitos destacados no card 2.",
   "candidato_reel": "sim (hipótese editorial, sem dado de desempenho): o professor pode narrar a linha do tempo das fases",
-  "legenda": "Quinto dia de dengue. A febre cedeu, mas é preciso procurar sinais de alarme, especialmente nessa fase. Você daria alta? Caso clínico fictício, criado pela equipe MedQ para fins didáticos. Salve para consultar no plantão e compartilhe. #MedQ #Dengue #ResidenciaMedica",
+  "legenda": "A febre cedeu no 5º dia de dengue, mas o paciente tem dor abdominal intensa e vômitos persistentes. Você daria alta? Responda antes de conferir a conduta. Caso clínico fictício da equipe MedQ, elaborado para fins didáticos. #MedQ #Dengue #ResidenciaMedica",
   "tema": "Dengue: sinais de alarme",
   "dificuldade": "Não classificada",
   "status_cientifico": "PENDENTE: revisão docente",

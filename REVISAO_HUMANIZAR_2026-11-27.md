@@ -29,3 +29,15 @@ A revisão é textual, não uma nova validação clínica ou confirmação dos r
 - 20 legendas TXT derivadas diretamente da mesma revisão dos registros HTML.
 - Seis fichas JSON e controle mestre JSON/CSV atualizados, sem alterar campos protegidos.
 - Não houve teste de navegador, inspeção visual de imagens, comparação individual de todos os TXT anteriores ou validação de ZIP. Não publicar esta revisão sem concluir os bloqueios.
+
+## Segunda rodada: voz editorial e fidelidade aos dados
+
+Revisão de 55 campos dos mesmos 20 posts. A primeira versão das 20 legendas individuais foi conferida com o HTML e todas coincidiram. A segunda versão foi aplicada aos TXT, ao HTML e às fichas/controles textuais do piloto.
+
+**Aristo:** destaque para o método de revisão e para os percentuais por quintil quando disponíveis. **MedQ:** destaque para a resolução do caso e as alternativas escolhidas pelos alunos. A diferenciação segue a finalidade editorial das marcas; não é um novo levantamento de desempenho.
+
+Os percentuais agregados de 43% (TB contato), 46% (teste influenza), 48,2% (indução), 48% (Lauren) e 56% (vacinação do prematuro) foram substituídos nas legendas por percentuais por quintil registrados nas respectivas justificativas. Esses agregados estavam nas legendas anteriores, mas não constavam das justificativas numéricas consultadas; a substituição não afirma que os dados anteriores eram falsos. No trauma, Robson e TB resistente, priorizaram-se os percentuais de alternativas diretamente registrados. As justificativas, referências, gabaritos, metadados e status não foram alterados. O material original segue no histórico do Git.
+
+A revisão clínica é de redação e delimitação ao enunciado, não confirmação de condutas. Foram contextualizados os conceitos de hipocalcemia neonatal, VPN, asma, indução com cesárea prévia, topografia pupilar, Robson, disseminação do câncer gástrico, trauma e vacinação. A equipe docente deve verificar as fontes e os casos completos antes de aprovar.
+
+As chamadas comerciais e os convites a revisar variam conforme o assunto. Mantidas as hashtags e a identificação dos casos fictícios. Não houve revisão visual dos 117 cards ou regeneração de ZIP/PPTX/XLSX; o PR permanece rascunho. Não publicar antes da sincronização e aprovação.
