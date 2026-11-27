@@ -1,6 +1,6 @@
 # Semana 30/11 a 06/12/2026: formato "prova real"
 
-Foco nas provas que estão chegando: **USP-SP (06/12)** e **SES-DF (12/12)**. Os posts antigos (16/11 a 31/01) saíram do site e das pastas; continuam no histórico do Git.
+Foco nas provas que estão chegando: **USP-SP e IPSEMG (06/12)** e **SES-DF (12/12)**. Os posts antigos (16/11 a 31/01) saíram do site e das pastas; continuam no histórico do Git.
 
 ## Grade
 
@@ -8,7 +8,7 @@ Foco nas provas que estão chegando: **USP-SP (06/12)** e **SES-DF (12/12)**. Os
 |---|---|---|
 | Seg 30/11 | SES-DF 2025 · Sífilis na gestante: tratar antes de confirmar? **(professor)** | SES-DF 2024 · Metildopa previne pré-eclâmpsia? |
 | Ter 01/12 | SES-DF 2024 · A frase adulterada do Código de Ética | SES-DF 2024 · Índice de envelhecimento **(professor)** |
-| Qua 02/12 | SES-DF 2025 · Fios cirúrgicos: qual o corpo não absorve? **(professor)** | livre (ver abaixo) |
+| Qua 02/12 | SES-DF 2025 · Fios cirúrgicos: qual o corpo não absorve? **(professor)** | IPSEMG 2024 · Teste do coraçãozinho: 93% confirma cardiopatia? |
 | Qui 03/12 | USP-SP 2024 · Enxaqueca menstrual: qual contraceptivo? **(professor)** | USP-SP 2024 · Palpação das mamas: qual posição? |
 | Sex 04/12 | USP-SP 2024 · Vasculite por IgA: o que vigiar depois | USP-SP 2024 · ICFEr: FC 68 e a ivabradina **(professor)** |
 | Sáb 05 / Dom 06 | véspera e dia da USP-SP: sem carrossel | |
@@ -28,11 +28,12 @@ Regras do prompt seguidas: nenhum número inventado, sem jargão de cursinho, se
 
 ## Pendências antes de publicar
 
-- **Relatório de cada prova.** Precisamos do % de erro (capa) e do % por alternativa (card 3) das 9 questões. No card, esses campos aparecem como `__%` em amarelo. O N de resoluções já é real e vem do banco anterior.
+- **Relatório de cada prova.** Precisamos do % de erro (capa) e do % por alternativa (card 3) das 10 questões. No card, esses campos aparecem como `__%` em amarelo. O N de resoluções já é real e vem do banco anterior.
 - **Professores.** Faltam nome e foto dos 5 professores (Obstetrícia, Medicina Preventiva, Cirurgia Geral, Ginecologia e Cardiologia), e cada um precisa validar ou reescrever a própria fala.
 - **Revisão docente** de toda a parte científica.
 - **Logo vetorial.** O logo atual foi recortado das artes antigas; para a versão final, usar o arquivo do João.
-- **MedQ quarta 02/12.** A questão de hernioplastia da SES-DF depende de uma imagem de terceiro (Instituto Simutec), então ficou de fora. Também não há questões de SCM-SP (05/12) nem de IPSEMG (06/12) no banco. Se mandarem uma questão dessas provas, ela entra nesse espaço.
+- **IPSEMG 2024 Q81 (teste do coraçãozinho):** sem número de resoluções; a chancela da capa está pendente. O comentário da questão na plataforma diz "Alternativa A – Correta" e depois dá gabarito D: corrigir lá (A está errada; a triagem é para RN com 35 semanas ou mais).
+- **Origem dos números de resoluções** das outras 9 capas: não aparecem nos arquivos de controle; confirmar a fonte antes de publicar.
 
 ## Como regerar
 

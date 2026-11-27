@@ -63,7 +63,7 @@ h2 em{{font-style:normal;color:{t['brand']}}}
 .light .slot{{color:#8A5300;border-color:#E39A00;background:#FFF2DB}}
 .bubble{{position:relative;display:inline-block;align-self:flex-start;background:{t['brand']};color:#fff;font-weight:800;font-size:44px;border-radius:18px;padding:22px 52px}}
 .bubble:after{{content:'';position:absolute;left:96px;bottom:-24px;border:14px solid transparent;border-top:12px solid {t['brand']};border-left-width:18px;border-right-width:18px;border-top-width:26px}}
-.dark .bubble{{background:{t['acc']};color:{t['acc_ink']}}}.dark .bubble:after{{border-top-color:{t['acc']}}}.dark .bubble.ghost{{background:transparent;color:#fff;border:3px solid {t['acc']}}}.brandbg .bubble{{background:#fff;color:{t['brand']}}}.brandbg .bubble:after{{border-top-color:#fff}}
+.dark .bubble{{background:{t['acc']};color:{t['acc_ink']}}}.dark .bubble:after{{border-top-color:{t['acc']}}}.dark .bubble.ghost{{white-space:nowrap;font-size:38px;background:transparent;color:#fff;border:3px solid {t['acc']}}}.brandbg .bubble{{background:#fff;color:{t['brand']}}}.brandbg .bubble:after{{border-top-color:#fff}}
 .meta{{font-size:30px;font-weight:600;margin-top:46px}}
 .logo{{height:64px;margin-top:auto;align-self:flex-start}}
 .light .logo{{filter:brightness(0) saturate(100%)}}
@@ -132,7 +132,7 @@ def cards(p, split=False):
 <div class='top' style='margin-top:120px'><span>Prova real • {prova}</span></div>
 <h1 style='font-size:{84 if len(c["headline"]) < 70 else 72 if len(c["headline"]) < 90 else 64}px'>{fmt(c['headline'])}</h1>
 <div class='dado'>{fmt(c['dado'])}</div>
-<div class='fonte'>Dados extraídos de {f"{p['n']:,}".replace(',', '.')} resoluções desta questão na plataforma {t['plataforma']}.</div>
+{f"<div class='fonte'>Dados extraídos de {p['n']:,} resoluções desta questão na plataforma {t['plataforma']}.</div>".replace(',', '.', 1) if p.get('n') else "<div class='fonte'><span class='slot' style='font-size:26px'>Nº de resoluções pendente</span></div>"}
 <div class='bubble' style='margin-top:52px'>Veja a questão ›</div>
 <div class='meta'>{html.escape(p['area'])} • {html.escape(p['tema'])}{f' • prova em {data_prova}' if data_prova else ''}</div>
 {logo(t)}""", BLOB_TR.format(c=t['acc'])))
@@ -171,7 +171,7 @@ def cards(p, split=False):
     out.append(('dark', head('Antes da prova') + f"""
 <div class='fecho' style='margin-top:120px'>{fmt(p['fecho'])}</div>
 <div class='fecho2'>Qual seria a sua conduta? Discuta nos comentários.</div>
-<div class='cta'><div class='bubble'>Salve para revisar ›</div><div class='bubble' style='background:transparent;border:3px solid {t['brand2']};color:#fff'>Envie para quem vai fazer a {p['banca']} ›</div></div>
+<div class='cta'><div class='bubble'>Salve para revisar ›</div><div class='bubble' style='background:transparent;border:3px solid {t['brand2']};color:#fff'>Envie para quem vai fazer {'o' if p['banca'] in ('IPSEMG',) else 'a'} {p['banca']} ›</div></div>
 {logo(t)}""".replace("<div class='bubble' style='background:transparent", "<div class='bubble ghost' style='background:transparent"), BLOB_BR.format(c=t['acc'])))
 
     N = len(out)

@@ -12,6 +12,7 @@
 PROVAS = {
     'USP-SP': '06/12',
     'SES-DF': '12/12',
+    'IPSEMG': '06/12',
 }
 
 POSTS = [
@@ -183,7 +184,40 @@ dict(
     fecho='Origem natural não quer dizer absorção. A SES-DF montou a questão inteira sobre essa confusão.',
     legenda='Categute, polidioxanona, poliglactina e seda. Qual deles o corpo não absorve? A SES-DF montou uma questão de quatro palavras sobre a confusão entre origem e absorção. No carrossel, a classificação completa e o comentário do professor. Dados de 795 resoluções desta questão na plataforma Aristo. A SES-DF é em 12/12: salve para revisar. #Aristo #SESDF #Cirurgia #ResidenciaMedica',
 ),
-# MedQ 02/12: espaço livre (ver SEMANA.md).
+dict(
+    id='MEDQ-20261202-01', marca='MedQ', data='2026-12-02',
+    banca='IPSEMG', ano='2024', area='Pediatria', tema='Teste do coraçãozinho',
+    titulo='Teste do coraçãozinho: 93% confirma cardiopatia?',
+    gabarito='D', n=None,
+    capa=dict(
+        headline='Saturação de 93% no teste do coraçãozinho. **Você já pediria o ecocardiograma?**',
+        dado='[[__]] dos alunos erraram a interpretação do teste.',
+    ),
+    enunciado='Você é o pediatra de plantão e vai avaliar um bebê com **36 horas de vida** a pedido do R1 de pediatria. O bebê nasceu de **39 semanas** de idade gestacional e de parto vaginal, mãe 24 anos, G2P1A1, peso de nascimento: 3.270 g. O bebê suga ao seio materno, tem **exame físico normal**, já urinou e evacuou. Você irá realizar o teste do coraçãozinho.',
+    comando='A respeito desse teste, é correto afirmar que',
+    alternativas={
+        'A': 'o teste deve ser realizado em todos os recém-nascidos a termo e prematuros antes da alta hospitalar.',
+        'B': 'bebês com ecocardiograma fetal normal não precisam realizar o teste do coraçãozinho.',
+        'C': 'saturação menor que 94% ou a diferença entre membro superior direito e inferior maior ou igual a 4% confirma cardiopatia congênita.',
+        'D': 'quando a saturação é maior ou igual a 95% e a diferença entre membro superior direito e inferior menor ou igual a 3%, o teste é considerado normal.',
+    },
+    vies=[
+        ('C: o resultado duvidoso lido como positivo', 'Saturação entre 90% e 94% ou diferença de 4% ou mais não confirma nada: o teste é repetido em 1 hora, por até duas vezes.'),
+        ('A: "todos os prematuros"', 'A triagem é para recém-nascidos assintomáticos com 35 semanas ou mais, entre 24 e 48 horas de vida.'),
+        ('B: o eco fetal como dispensa', 'Ecocardiograma fetal normal não substitui a triagem neonatal.'),
+    ],
+    pulo=dict(
+        pergunta='Como a SBP interpreta o teste (2022)',
+        blocos=[
+            ('Normal', 'Saturação de 95% ou mais no membro superior direito e no membro inferior, com diferença de até 3%.'),
+            ('Duvidoso e positivo', 'Entre 90% e 94%, ou diferença de 4% ou mais: repetir em 1 hora, até duas vezes. Positivo é saturação de 89% ou menos, ou o duvidoso que persiste: aí, avaliação cardiológica com ecocardiograma.'),
+        ],
+        gabarito='Gabarito D. Um resultado duvidoso pede nova medida, não diagnóstico.',
+    ),
+    professor=None,
+    fecho='Um número fora da faixa normal não é diagnóstico. O IPSEMG quis saber se você repetiria o teste antes de pedir o eco.',
+    legenda='Saturação de 93% no teste do coraçãozinho. Você já pediria o ecocardiograma? O IPSEMG 2024 cobrou a interpretação atualizada pela SBP, e a alternativa mais atraente transforma um resultado duvidoso em diagnóstico. No carrossel, as três faixas do teste. O IPSEMG é domingo, 06/12: salve para revisar. #MedQ #IPSEMG #Pediatria #ResidenciaMedica',
+),
 # ───────────────────────── QUINTA 03/12 ─────────────────────────
 dict(
     id='ARISTO-20261203-01', marca='Aristo', data='2026-12-03',
